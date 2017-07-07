@@ -1,0 +1,102 @@
+body{
+	background-color:#fff !important;
+	font-size:13px;
+	font-family:"微软雅黑";
+}
+table,label{
+	font-size:13px;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
+	font-size:13px;
+}
+.menu-text{
+	font-weight:bold;
+}
+.navbar .navbar-brand{
+	padding-top:2px;
+	padding-bottom:3px;
+}
+h1{
+	    font-size: 22px;
+    font-family: 微软雅黑;
+    margin-bottom: 5px;
+}
+.none{
+	display:none;
+}
+.alert{
+	font-size:13px;
+}
+.forgot-box .toolbar, .signup-box .toolbar{
+	    background: #5090C1;
+    border-top: 2px solid #597597;
+}
+.forgot-box .back-to-login-link, .signup-box .back-to-login-link, .login-box .forgot-password-link, .login-box .user-signup-link{
+	color:#fff;
+}
+.ace-nav .nav-user-photo{
+	width:40px;
+	height:40px;
+}
+#permission-list td{
+	min-width:80px;
+	word-break:break-word;
+	
+}
+.login-container{
+	float: left;
+	margin-left:100px;
+}
+.checkok{
+	color: green;
+    font-size: 20px !important;
+}
+.midContent{
+	position: relative;
+    z-index: 999;
+    width: 885px;
+    margin: 0 auto;
+}
+.midContent:after:{
+	display:block;
+	content:"";
+	width:0;
+	height:0;
+	zoom:1;
+	clear:both;
+}
+.bgimg{
+	    background: url("../img/big_bg2.jpg") no-repeat center;
+	    height: 800px;
+	    position: absolute;
+	    width: 100%;
+	    margin-top: 200px;
+	    text-align:center;
+	    padding-right:200px;
+	    padding-top:100px;
+    	background-position-y: 0;
+	    background-size: 100%;
+	}
+.bgimg span{text-align:left;display:inline-block;}
+
+@media only screen and (max-width: 540px){
+	.bgimg {
+		display:none;
+	}
+	.login-container{
+		margin-top:40px;
+	}
+}
+@media only screen and (max-width: 479px){
+.navbar:not(.navbar-collapse) .ace-nav {
+		text-align:right;
+	}
+}
+.profile-picture{
+	position:relative;
+}
+.ace-file-input .ace-file-container.selected + .remove{
+	display:none;
+}
+input[type=checkbox].ace:disabled + .lbl::before, input[type=radio].ace:disabled + .lbl::before, input[type=checkbox].ace[disabled] + .lbl::before, input[type=radio].ace[disabled] + .lbl::before, input[type=checkbox].ace.disabled + .lbl::before, input[type=radio].ace.disabled + .lbl::before{cursor:not-allowed}
+.checkbox label input[type=checkbox].ace:disabled + .lbl, .radio label input[type=radio].ace:disabled + .lbl{cursor:not-allowed}

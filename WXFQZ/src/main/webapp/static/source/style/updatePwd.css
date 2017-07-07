@@ -1,0 +1,14 @@
+.pwdStrength{
+	padding: 5px 4px 6px;
+    line-height: 25px;
+}
+.pwdStrength span{
+	display:inline-block;
+	text-align:center;
+	background:#ededed;
+}
+ @media (max-width:768px){
+ 	.mobile_formLeft{text-align:right;width:105px !important;}
+ 	.mobile_formRight{max-width:calc(100% - 105px)}
+ 	.mobile_queren{text-align: center;}
+ }

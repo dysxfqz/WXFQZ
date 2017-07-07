@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.suteam.html.user.model.UserInfo" table="user_info">
+		<id name="id" column="id" type="string">
+			<generator class="uuid" />
+		</id>
+		<property name="userId" column="ui_user_id" type="java.lang.String" />
+		<property name="name" column="ui_name" type="java.lang.String" />
+		<property name="sex" column="ui_sex" type="java.lang.Integer" />
+		<property name="province" column="ui_province" type="java.lang.String" />
+		<property name="city" column="ui_city" type="java.lang.String" />
+		<property name="area" column="ui_area" type="java.lang.String" />
+		<property name="address" column="ui_address" type="java.lang.String" />
+		<property name="phone" column="ui_phone" type="java.lang.String" />
+		<property name="postCode" column="ui_postcode" type="java.lang.String" />
+		<property name="email" column="ui_email" type="java.lang.String" />
+		<property name="headUrl" column="ui_head_url" type="java.lang.String" />
+		<property name="IdCardName" column="ui_id_card_name" type="java.lang.String" />
+		<property name="IdCardUrl" column="ui_id_card_url" type="java.lang.String" />
+		<property name="createTime" column="ui_create_time" type="java.util.Date" />
+		<property name="updateTime" column="ui_update_time" type="java.util.Date" />
+		<property name="documentType" column="ui_document_type" type="java.lang.Integer" />
+		<property name="documentId" column="ui_document_id" type="java.lang.String" />
+		<property name="emailStartDate" column="ui_email_start_date" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

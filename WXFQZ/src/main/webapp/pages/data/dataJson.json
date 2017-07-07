@@ -1,0 +1,322 @@
+[
+    {
+        "value": [
+            1226629000,
+            null,
+            null
+        ],
+        "name": "Health and Human Services",
+        "id": "branch-8",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    2000
+                ],
+                "name": "东城区",
+                "id": "leaf-138",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            818284000,
+            null,
+            null
+        ],
+        "name": "Social Security Administration",
+        "id": "branch-34",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    808041000
+                ],
+                "name": "西城区",
+                "id": "leaf-531",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            677483000,
+            null,
+            null
+        ],
+        "name": "Defense--Military Programs",
+        "id": "branch-5",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    294891000
+                ],
+                "name": "朝阳区",
+                "id": "leaf-77",
+                "discretion": "discretionary"
+            }
+        ]
+    },
+    {
+        "value": [
+            612004000,
+            null,
+            null
+        ],
+        "name": "Treasury",
+        "id": "branch-15",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    474146000
+                ],
+                "name": "丰台区",
+                "id": "leaf-279",
+                "discretion": "net interest"
+            }
+        ]
+    },
+    {
+        "value": [
+            148349000,
+            null,
+            null
+        ],
+        "name": "Agriculture",
+        "id": "branch-3",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    104212000
+                ],
+                "name": "石景山区",
+                "id": "leaf-39",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            132612000,
+            null,
+            null
+        ],
+        "name": "Labor",
+        "id": "branch-12",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    117659000
+                ],
+                "name": "海淀区",
+                "id": "leaf-218",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            132359000,
+            null,
+            null
+        ],
+        "name": "Veterans Affairs",
+        "id": "branch-17",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    70477000
+                ],
+                "name": "门头沟区",
+                "id": "leaf-310",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            129458000,
+            null,
+            null
+        ],
+        "name": "Transportation",
+        "id": "branch-16",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    70546000
+                ],
+                "name": "房山区",
+                "id": "leaf-297",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            93790000,
+            null,
+            null
+        ],
+        "name": "Education",
+        "id": "branch-6",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    31433000
+                ],
+                "name": "通州区",
+                "id": "leaf-95",
+                "discretion": "discretionary"
+            }
+        ]
+    },
+    {
+        "value": [
+            83502000,
+            null,
+            null
+        ],
+        "name": "Office of Personnel Management",
+        "id": "branch-28",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    83239000
+                ],
+                "name": "顺义区",
+                "id": "leaf-403",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            66476000,
+            null,
+            null
+        ],
+        "name": "Other",
+        "id": "branch-29",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    18724000
+                ],
+                "name": "昌平区",
+                "id": "leaf-443",
+                "discretion": "discretionary"
+            }
+        ]
+    },
+    {
+        "value": [
+            58663000,
+            null,
+            null
+        ],
+        "name": "Other Defense Civil Programs",
+        "id": "branch-30",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    48455000
+                ],
+                "name": "大兴区",
+                "id": "leaf-520",
+                "discretion": "mandatory"
+            }
+        ]
+    },
+    {
+        "value": [
+            52092000,
+            null,
+            null
+        ],
+        "name": "Housing and Urban Development",
+        "id": "branch-10",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    36186000
+                ],
+                "name": "怀柔区",
+                "id": "leaf-178",
+                "discretion": "discretionary"
+            }
+        ]
+    },
+    {
+        "value": [
+            50045000,
+            null,
+            null
+        ],
+        "name": "Homeland Security",
+        "id": "branch-9",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    10493000
+                ],
+                "name": "平谷区",
+                "id": "leaf-147",
+                "discretion": "discretionary"
+            }
+        ]
+    },
+    {
+        "value": [
+            50045000,
+            null,
+            null
+        ],
+        "name": "Homeland Security",
+        "id": "branch-9",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    10493000
+                ],
+                "name": "密云区",
+                "id": "leaf-147",
+                "discretion": "discretionary"
+            }
+        ]
+    },
+    {
+        "value": [
+            50045000,
+            null,
+            null
+        ],
+        "name": "Homeland Security",
+        "id": "branch-9",
+        "discretion": null,
+        "children": [
+            {
+                "value": [
+                    10493000
+                ],
+                "name": "延庆区",
+                "id": "leaf-147",
+                "discretion": "discretionary"
+            }
+        ]
+    }
+]

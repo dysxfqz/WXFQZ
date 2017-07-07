@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>$paramtitle</title>
+<meta charset="utf-8">
+<style type="text/css">
+* {margin:0; padding:0;}
+body {width:730px; margin:0 auto;line-height: 2;}
+img {border:none;}
+a {text-decoration:none;}
+#top{ width:686px; height:68px; border-bottom:1px #d3e5f3 solid; margin:30px auto 0px;}
+#logo{ float:left;}
+#top_yc{ float:right;}
+
+#middle{ width:686px; margin:10px auto 15px; height:auto;font-size: 14px; font-family:"微软雅黑";}
+
+#m_l{ float:left; width:477px; height:auto; overflow:hidden;}
+#banner{ width:477px; height:131px; margin-bottom:17px;}
+#ztnr{ width:477px; height:auto;}
+
+#xq{ width:450px; margin:0 auto;font-size: 14px;}
+
+#m_r{ float:left; width:192px; height:auto; overflow:hidden; margin-left:17px; display:inline;}
+#m_r_t{ width:192px; height:auto;}
+#m_r_t ul{ width:192px; margin-left:5px;}
+#m_r_t ul li{ padding-left:32px; height:30px;font-size: 14px; font-family:"微软雅黑";}
+
+
+.ycdy{ margin-bottom:17px;}
+.qtb{ background:url($imageUrl/images/mail/qtb.jpg) no-repeat;}
+.mtb{ background:url($imageUrl/images/mail/mtb.jpg) no-repeat;}
+
+
+#bottom{ clear:both; width:686px; height:55px; margin:0 auto; border-top:1px #d3e5f3 solid;font-size: 14px; font-family:"微软雅黑";}
+#bottom_l{ float:left; width:430px; color:#7f7f7f; line-height:31px; margin-top:20px;font-size: 14px;}
+#bottom_r{ float:right; width:220px; color:#7f7f7f; line-height:31px; background:url($imageUrl/images/mail/yxtb.jpg) no-repeat; padding-left:30px; margin-top:20px;font-size: 14px;}
+
+
+p{ color:#4c4c4c; width:440px;font-size: 14px;}
+p a:hover{ text-decoration:underline;}
+.jh{ color:#ff7f27; font-size:16px; font-weight:bold;}
+.linkc{ color:#0066cc;}
+
+
+.thzbj{ margin-left:50px;}
+.yfd{ float:right;}
+
+.titleName{font-size: 14px;font-weight: bold;}
+.jiacu{font-weight:bold;}
+.yanzheng{
+    color: #fff;
+    background: #FFD24D;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    padding: 4px;
+    border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div id="middle">
+	<div id="m_l">
+        <div id="ztnr">
+        	<div id="xq">
+				<p class="titleName">绑定邮箱</p>
+				<br>
+				<p>尊敬的$userName：</p>
+				<p>您好，您距离成功绑定邮箱只差一步啦，请点击下面按钮（24小时有效）完成邮箱绑定：</p>
+				<p><a href="http://$mailServer/v1/anon/user/update/toBoundEmail.do?email=$email" class="yanzheng">验证链接</a></p>
+				<p style="color:#999;font-size:12px">此链接24小时之内有效，请及时进行邮箱绑定，如果以上按钮无法点击，请将下方链接拷贝到浏览器地址栏中进行跳转</p>
+				<p>http://$mailServer/v1/anon/user/update/toBoundEmail.do?email=$email</p>
+				<br />
+				<br />
+				<p span style="font-weight:bold;">$paramtitle</p>
+		   </div>
+        </div>
+    </div>
+    <div style="width:686px; clear:both; height:1px;">&nbsp;</div>
+</div>
+<!-- <script>timeStr=new Date().toLocaleString();document.write(timeStr)</script> -->
+</body>
+</html>

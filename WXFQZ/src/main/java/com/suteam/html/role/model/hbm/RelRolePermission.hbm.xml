@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.suteam.html.role.model.RelRolePermission" table="rel_role_permission">
+		<id name="id" column="id" type="string">
+			<generator class="uuid" />
+		</id>
+		<property name="roleId" column="role_id" type="java.lang.String" />
+		<property name="permissionId" column="permission_id" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

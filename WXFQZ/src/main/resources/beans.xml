@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+						http://www.springframework.org/schema/mvc 
+						http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd 
+						http://www.springframework.org/schema/cache 
+						http://www.springframework.org/schema/cache/spring-cache.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+						http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+						http://www.springframework.org/schema/tx 
+						http://www.springframework.org/schema/tx/spring-tx-3.0.xsd ">
+
+	<!-- 注解驱动 -->
+	<mvc:annotation-driven />
+	<!-- 组件扫描 -->
+	<context:component-scan base-package="com"></context:component-scan>
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 定义数据源1 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="autoCommitOnClose" value="${cpool.autoCommitOnClose}" />
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}" />
+		<property name="initialPoolSize" value="${cpool.minPoolSize}" />
+		<property name="minPoolSize" value="${cpool.minPoolSize}" />
+		<property name="maxPoolSize" value="${cpool.maxPoolSize}" />
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}" />
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}" />
+        <property name="AcquireRetryAttempts"  value="${cpool.AcquireRetryAttempts}"/> 
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}" />
+        <property name="AcquireRetryDelay" value="${cpool.AcquireRetryDelay}"/>           
+        <property name="BreakAfterAcquireFailure" value="${cpool.BreakAfterAcquireFailure}"/>
+        <property name="MaxStatements" value="${cpool.MaxStatements}"/>
+        <property name="MaxStatementsPerConnection" value="${cpool.MaxStatementsPerConnection}"/>
+        <property name="NumHelperThreads" value="${cpool.NumHelperThreads}"/>
+	</bean>
+
+	<!-- sessionFactory1 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+
+		<!-- hibernate映射文件的位置 -->
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:com/suteam/html/role/model/hbm/</value>
+				<value>classpath:com/suteam/html/permission/model/hbm/</value>
+				<value>classpath:com/suteam/html/system/model/hbm/</value>
+				<value>classpath:com/suteam/html/user/model/hbm/</value>
+			</list>
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.Dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.hbm2ddl">update</prop>
+				<prop key="hibernate.jdbc.use_scrollable_resultset">false</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 事务管理器1 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 配置事物的传播特性 (事物通知)1 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:advisor pointcut="execution(* com.suteam.html..*.*.*.*(..))"
+			advice-ref="txAdvice" />
+	</aop:config>
+
+	<mvc:interceptors>
+		<!-- 拦截特殊请求 -->
+		<!-- 
+		<mvc:interceptor>
+			<mvc:mapping path="/admin/*" /> 
+			<mvc:exclude-mapping path="/admin/login.do" />
+			<bean class="cn.wuzhuti.admin.interceptor.AdminInterceptor"></bean>
+		</mvc:interceptor>
+		 -->
+		 <!-- 拦截所有的请求 -->
+		<!-- <bean class="com.suteam.html.common.interceptor.SqlInjectInterceptor" /> -->
+		<!-- 拦截特殊请求 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/v1/html/**" /> 
+			<bean class="com.suteam.html.common.interceptor.MenuDispatchInterceptor"></bean>
+		</mvc:interceptor>
+	 
+	</mvc:interceptors>
+	 
+	<!-- 缓存配置 -->  
+	<!-- 启用缓存注解功能(请将其配置在Spring主配置文件中) -->  
+	<cache:annotation-driven cache-manager="ehCacheManager" />  
+	<!-- Spring提供的基于的Ehcache实现的缓存管理器 -->  
+	<bean id="cacheManagerFactory"  class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">  
+	    <property name="configLocation" value="classpath:ehcache.xml" />  
+	</bean>  
+	<bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">  
+	    <property name="cacheManager" ref="cacheManagerFactory" />  
+	</bean>
+</beans>

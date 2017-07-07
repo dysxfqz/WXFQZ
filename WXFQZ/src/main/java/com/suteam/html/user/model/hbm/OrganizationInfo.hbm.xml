@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.suteam.html.user.model.OrganizationInfo" table="organization_info">
+		<id name="id" column="id" type="string">
+			<generator class="uuid" />
+		</id>
+		<property name="userId" 	column="oi_user_id" 	type="java.lang.String" />
+		<property name="name" 		column="oi_name" 		type="java.lang.String" />
+		<property name="email" 		column="oi_email" 		type="java.lang.String" />
+		<property name="address" 	column="oi_address" 	type="java.lang.String" />
+		<property name="postCode" 	column="oi_postcode" 	type="java.lang.String" />
+		<property name="regNo" 		column="oi_reg_no" 		type="java.lang.String" />
+		<property name="regAdd" 	column="oi_reg_add" 	type="java.lang.String" />
+		<property name="regDate" 	column="oi_reg_date" 	type="java.util.Date" />
+		<property name="regTime" 	column="oi_reg_time" 	type="java.lang.String" />
+		<property name="taxNo" 		column="oi_tax_no" 		type="java.lang.String" />
+		<property name="regUrl" 	column="oi_reg_url" 	type="java.lang.String" />
+		<property name="taxUrl" 	column="oi_tax_url" 	type="java.lang.String" />
+		<property name="makerName" 	column="oi_maker_name" 	type="java.lang.String" />
+		<property name="makerId" 	column="oi_maker_id" 	type="java.lang.String" />
+		<property name="makerUrl" 	column="oi_maker_url" 	type="java.lang.String" />
+		<property name="phone" 		column="oi_phone" 		type="java.lang.String" />
+		<property name="createTime" column="oi_create_time" type="java.util.Date" />
+		<property name="updateTime" column="oi_update_time" type="java.util.Date" />
+		<property name="jobType" 	column="oi_job_type" 	type="java.lang.Integer" />
+		<property name="documentType" 	column="oi_document_type" 	type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

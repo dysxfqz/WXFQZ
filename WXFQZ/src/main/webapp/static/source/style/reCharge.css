@@ -1,0 +1,126 @@
+.bank-alipay{
+    width: 190px;
+    height: 35px;
+    display: inline-block;
+    background: url("../img/banks.png") no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+    border: 1px solid #ddd;
+	background-position: -380px -0px;
+	margin-top: 20px;
+}
+.bank-alipay-gong{
+	 width: 190px;
+    height: 35px;
+    display: inline-block;
+    background: url("../img/banks.png") no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+    border: 1px solid #ddd;
+	background-position: -190px -140px;
+}
+.ng-scope{
+	    margin-top: 20px;
+} 
+.bank_detail{
+	 margin-top: 20px;
+}
+.bank_detail td{
+	padding:5px;
+}
+.weiChatMoney{
+	display: inline-block;
+    width: 195px;
+    font-size: 25px;
+    color: #8AC23D;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.alertInfo{
+	    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+    background: rgba(0,0,0,0.8);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000,endColorstr=#88000000);
+}
+.alertInfo-content{
+	background:#fff;
+	height:auto;
+	padding:0;
+}
+.closeWin{
+	cursor:pointer;
+}
+.get-code{
+	right: 0 !important;
+    font-size: 13px !important;
+    line-height: 25px !important;
+}
+.alertInfo-footer{
+	text-align:right;
+}
+.alertInfo-footer span{
+	margin-bottom:20px;
+	margin-top: 20px;
+	    line-height: 15px;
+    margin-left: 10px;
+}
+.reChargTip{
+	    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.tipWor{
+	    font-size: 13px;
+    color: #999;
+    margin-top: 6px;
+    display: inline-block;
+}
+.weicha{
+	width: 200px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-top: 20px;
+    display:block;
+}
+.weicha span{
+	margin-left:10px;
+	display:inline-block;
+	font-weight:bold;
+}
+.weiChatCeng{
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+    background: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000,endColorstr=#88000000);
+    height: 100%;
+    width:100%;
+}
+.weiChatCeng .alert-content1{
+	background:#fff;
+}
+#qrcode img{
+	width:100%;
+}
+#qrcode canvas{
+	width:100%;
+}
+.weiCT{
+	margin-top: 20px;
+    margin-bottom: 15px;
+}
+#noTime{
+	display:none;
+	color:red;	
+}
+.refash{
+	color:blue;
+	cursor:pointer;
+}

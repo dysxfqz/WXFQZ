@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.suteam.html.user.model.User" table="user">
+		<id name="id" column="id" type="string">
+			<generator class="uuid" />
+		</id>
+		<property name="userName" 	column="u_user_name" 	type="java.lang.String" />
+		<property name="userNumber" 	column="u_user_number" 	type="java.lang.String" />
+		<property name="phone" 		column="u_phone" 		type="java.lang.String" />
+		<property name="email" 		column="u_email" 		type="java.lang.String" />
+		<property name="password" 	column="u_password" 	type="java.lang.String" />
+		<property name="status" 	column="u_status" 	type="java.lang.Integer" />
+		<property name="createTime" column="u_create_time" 	type="java.util.Date" />
+		<property name="roleType" 	column="u_role_type" 	type="java.lang.Integer" />
+		<property name="updateTime" column="u_update_time" 	type="java.util.Date" />
+		<property name="qualificationType"   column="u_qualification_type" 	 type="java.lang.Integer" />
+		<property name="qualificationStatus" column="u_qualification_status" type="java.lang.Integer" />
+		<property name="applyTime" column="u_auth_apply_time" 	type="java.util.Date" />
+		<property name="passedTime" column="u_auth_passed_time" 	type="java.util.Date" />
+		<property name="noPassReason" column="u_auth_nopass_reason" 	type="java.lang.String" />
+	</class>
+</hibernate-mapping>

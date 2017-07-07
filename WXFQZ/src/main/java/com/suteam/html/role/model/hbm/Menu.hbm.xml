@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.suteam.html.role.model.Menu" table="menu">
+		<id name="id" column="id" type="string">
+			<generator class="uuid" />
+		</id>
+		<property name="name" column="name" type="java.lang.String" />
+		<property name="permissionId" column="permission_id" type="java.lang.String" />
+		<property name="pid" column="pid" type="java.lang.String" />
+		<property name="sort" column="sort" type="java.lang.Integer" />
+		<property name="rank" column="rank" type="java.lang.Integer" />
+		<property name="htmlId" column="html_id" type="java.lang.String" />
+		<property name="htmlClass" column="html_class" type="java.lang.String" />
+		
+	</class>
+</hibernate-mapping>

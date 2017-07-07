@@ -1,0 +1,38 @@
+input textarea select{
+	border-radius:5px !important;
+}
+.checkok{
+	color: green;
+    font-size: 20px !important;
+}
+.checkfalse{
+	color: red;
+	font-size: 20px !important;
+}
+.apptip{
+	line-height:25px;
+	margin-bottom:25px;
+}
+#file1{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	filter:alpha（opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+}
+.uploadBtn{
+	display:none;
+	width:200px;
+}
+#localImag{
+	width:200px;
+	height:auto;
+	padding:0;
+	background-color: #D9EDF7;
+    border: none;
+}
+#localImag img{
+	width:100%;
+}
