@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,25 +14,21 @@ import com.suteam.html.common.util.ResponseUtils;
 
 @Controller
 public class TestAction {
-	
-	@RequestMapping(value = "/v1/pay/test/test")
+	private Logger log = Logger.getLogger(TestAction.class);
+
+	@RequestMapping(value = "/v1/anon/wechat/getMessage")
 	@ResponseBody
 	public String test(HttpServletRequest request, HttpServletResponse response) {
-		Map<String, Object> map = new HashMap<String, Object>();
 		try {
-			map.put("result", "ok");
-			map.put("values", "");
-			map.put("errormsg", EnumErrorCode.CODE_000000.msg);
-			map.put("errorcode", EnumErrorCode.CODE_000000.code);
-			ResponseUtils.renderJson(response, JSON.toJSONString(map));
+			String signature = request.getParameter("signature");
+			String timestamp = request.getParameter("timestamp");
+			String nonce = request.getParameter("nonce");
+			String echostr = request.getParameter("echostr");
+
+			log.info(signature + "," + timestamp + "," + nonce + "," + echostr);
+			ResponseUtils.renderJson(response, echostr);
 			return null;
 		} catch (Exception e) {
-			e.printStackTrace();
-			map.put("result", "error");
-			map.put("values", "");
-			map.put("errormsg", EnumErrorCode.CODE_000001.msg);
-			map.put("errorcode", EnumErrorCode.CODE_000001.code);
-			ResponseUtils.renderJson(response, JSON.toJSONString(map));
 			return null;
 		}
 
